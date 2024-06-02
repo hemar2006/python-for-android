@@ -592,7 +592,12 @@ class ToolchainCL:
         setup_color(args.color)
 
         if args.debug:
-            logger.setLevel(logging.DEBUG)
+            print("=========================== TODO: debugging, setting DEBUG logger ====================")
+            # TODO debugging
+            # logger.setLevel(logging.DEBUG)
+            logger.setLevel
+            logging.DEBUG
+            pass
 
         self.ctx = Context()
         self.ctx.use_setup_py = getattr(args, "use_setup_py", True)

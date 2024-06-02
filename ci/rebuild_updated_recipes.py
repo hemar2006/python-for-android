@@ -24,11 +24,15 @@ import sh
 import os
 import sys
 import argparse
+import logging
 from pythonforandroid.build import Context
 from pythonforandroid import logger
 from pythonforandroid.toolchain import current_directory
 from pythonforandroid.recipe import Recipe
 from ci.constants import TargetPython, CORE_RECIPES, BROKEN_RECIPES
+
+
+logging.getLogger("sh.command").setLevel(logging.WARNING)
 
 
 def modified_recipes(branch='origin/develop'):
